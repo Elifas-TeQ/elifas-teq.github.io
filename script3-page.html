@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Airport: Planes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(images/planes-bg-image.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-align-center">Function's Tabulation</h2>
+
+        <div class="container">
+            <button style="margin-bottom:20px" type="button" class="button text-size-huge block-width-full" onclick="calc()">
+                Calculate
+            </button>
+
+            <table id="tableFunctionTabulation" class="table" align="center">
+                <caption><b>Function's Tabulation</b></caption>
+                <tr>
+                    <th class="table">x</th>
+                    <th class="table">y(x)</th>
+                </tr>
+            </table>
+
+            <p id="resultPar1" class="text-align-justify" style="text-align:center">
+            </p>
+            <p id="resultPar2" class="text-align-justify" style="text-align:center">
+            </p>
+        </div>
+
+        <script language="JavaScript">
+            function calc() {
+                var a = -2.5,
+                    b = -1,
+                    n = 10;
+
+                var tableFT = document.getElementById("tableFunctionTabulation");
+
+                var h = (b - a) / n;
+                var maxY = Number.NEGATIVE_INFINITY,
+                    minY = Number.POSITIVE_INFINITY,
+                    appMaxX, appMinX;
+
+                for (var i = 0; i <= n; i++) {
+                    var row = tableFT.insertRow(i+1);
+                    var cellx = row.insertCell(0),
+                        celly = row.insertCell(1);
+                    var x = a + i*h,
+                        y = Math.asin(x + 2) + Math.pow(x, 2);
+                    cellx.innerHTML = x.toPrecision(6);
+                    if (Number.isNaN(y))
+                    {
+                        celly.innerHTML = "Infinity";
+                        continue;
+                    }
+                    celly.innerHTML = y.toPrecision(6);
+                    if (y > maxY)
+                    {
+                        maxY = y.toPrecision(6);
+                        appMaxX = x.toPrecision(6);
+                    }
+                    if (y < minY)
+                    {
+                        minY = y.toPrecision(6);
+                        appMinX = x.toPrecision(6);
+                    }
+                }
+
+                document.getElementById("resultPar1").textContent = "Maximum value of y(x) = y(" + appMaxX + ") = " + maxY + ".";
+                document.getElementById("resultPar2").textContent = "Minimum value of y(x) = y(" + appMinX + ") = " + minY + ".";
+
+                var list = tableFT.getElementsByTagName("td");
+                
+                for (var j = 0; j < list.length; j++)
+                {
+                    list[j].className = "table";
+                    list[j].style.paddingBottom = "5px";
+                    list[j].style.paddingTop = "5px";
+                    list[j].style.paddingLeft = "20px";
+                    list[j].style.paddingRight = "20px";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

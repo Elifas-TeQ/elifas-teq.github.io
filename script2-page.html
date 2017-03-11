@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Airport: Second Script</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-align-center">Second Script</h2>
+
+        <script language="JavaScript">
+            theTime = new Date();
+
+            currentSeconds = theTime.getSeconds();
+            currentSeconds = currentSeconds / 60;
+            currentSeconds = currentSeconds / 3;
+            currentSeconds = currentSeconds.toPrecision(1);
+
+            switch (currentSeconds)
+            {
+                case "0.1":
+                    document.writeln("<body text='Green'>");
+                    break;
+                case "0.2":
+                    document.writeln("<body text='Red'>");
+                    break;
+                case "0.3":
+                    document.writeln("<body text='Blue'>");
+                    break;
+                default:
+                    document.writeln("<body text='Black'>");
+                    break;
+            }
+
+            currentMinutes = theTime.getMinutes();
+            currentMinutes = currentMinutes % 2;
+
+            if (currentMinutes == 0)
+                document.writeln("<body bgcolor='white'");
+            else
+                document.writeln("<body bgcolor='yellow'>");
+        </script>
+
+        <div class="text-wrapper">
+            <p class="text-align-justify">An airliner is a type of aircraft for transporting passengers and air cargo. Such aircraft are most often operated by airlines. Although the definition of an airliner can vary from country to country, an airliner is typically defined as an aircraft intended for carrying multiple passengers or cargo in commercial service.</p>
+            <p class="text-align-justify">The largest airliners are <span class="text-color-green">wide-body</span> jets. These aircraft are frequently called twin-aisle aircraft because they generally have two separate aisles running from the front to the back of the passenger cabin. These aircraft are usually used for long-haul flights between airline hubs and major cities with many passengers.</p>
+            <p class="text-align-justify">A smaller, more common class of airliners is the <span class="text-color-green">narrow-body</span> or single aisle aircraft. These smaller airliners are generally used for short to medium-distance flights with fewer passengers than their <span class="text-color-green">wide-body</span> counterparts.</p>
+            <p class="text-align-justify">Regional airliners typically seat fewer than 100 passengers and may be powered by turbofans or turboprops. These airliners are the non-mainline counterparts to the larger aircraft operated by the major carriers, legacy carriers, and flag carriers and are used to feed traffic into the large airline hubs. These regional routes then form the spokes of a hub-and-spoke air transport model.</p>
+            <p class="text-align-justify"><span class="text-size-big">The Boeing 787 Dreamliner</span> is an American long-haul, mid-size widebody, twin-engine jet airliner made by Boeing Commercial Airplanes. Its variants seat 242 to 335 passengers in typical three-class seating configurations. It is Boeing's most fuel-efficient airliner and is a pioneering airliner with the use of composite materials as the primary material in the construction of its airframe. The 787 was designed to be 20% more fuel efficient than the Boeing 767, which it was intended to replace. The 787 Dreamliner's distinguishing features include mostly electrical flight systems, raked wingtips, and noise-reducing chevrons on its engine nacelles. It shares a common type rating with the larger Boeing 777 to allow qualified pilots to operate both models.</p>
+            <p class="text-align-justify"><span class="text-size-big">The Boeing 767</span> is a mid- to large-size, long-range, wide-body twin-engine jet airliner built by Boeing Commercial Airplanes. It was Boeing's first wide-body twinjet and its first airliner with a two-crew glass cockpit. The aircraft has two turbofan engines, a conventional tail, and, for reduced aerodynamic drag, a supercritical wing design. Designed as a smaller wide-body airliner than earlier aircraft such as the 747, the 767 has seating capacity for 181 to 375 people, and a design range of 3,850 to 6,385 nautical miles (7,130 to 11,825 km), depending on variant. Development of the 767 occurred in tandem with a narrow-body twinjet, the 757, resulting in shared design features which allow pilots to obtain a common type rating to operate both aircraft.</p>
+            <p class="text-align-justify"><span class="text-size-big">The Boeing 777</span> is a family of long-range wide-body twin-engine jet airliners developed and manufactured by Boeing Commercial Airplanes. It is the world's largest twinjet and has a typical seating capacity of 314 to 396 passengers, with a range of 5,240 to 8,555 nautical miles (9,704 to 15,844 km). Commonly referred to as the "Triple Seven", its distinguishing features include the largest-diameter turbofan engines of any aircraft, six wheels on each main landing gear, fully circular fuselage cross-section, and a blade-shaped tail cone. Developed in consultation with eight major airlines, the 777 was designed to replace older wide-body airliners and bridge the capacity difference between Boeing's 767 and 747. As Boeing's first fly-by-wire airliner, it has computer-mediated controls. It was also the first commercial aircraft to be designed entirely with computer-aided design.</p>
+            <p class="text-align-justify"><span class="text-size-big">The Boeing 747</span> is an American wide-body commercial jet airliner and cargo aircraft, often referred to by its original nickname, Jumbo Jet. Its distinctive "hump" upper deck along the forward part of the aircraft makes it among the world's most recognizable aircraft, and it was the first wide-body produced. Manufactured by Boeing's Commercial Airplane unit in the United States, the original version of the 747 was envisioned to have 150 percent greater capacity than the Boeing 707, one of the common large commercial aircraft of the 1960s. First flown commercially in 1970, the 747 held the passenger capacity record for 37 years. As of December 2016, the 747 has been involved in 60 hull-loss accidents resulting in 3,718 fatalities.</p>
+            <p class="text-align-justify"><span class="text-size-big">The Boeing 737</span> is an American short- to medium-range twinjet narrow-body airliner. Originally developed as a shorter, lower-cost twin-engine airliner derived from Boeing's 707 and 727, the 737 has developed into a family of ten passenger models with capacities from 85 to 215 passengers. The 737 is Boeing's only narrow-body airliner in production, with the 737 Next Generation (-700, -800, and -900ER) variants currently being built. Production has also begun on the re-engined and redesigned 737 MAX, which is set to enter service in 2017.</p>
+        </div>
+    </div>
+</body>
+</html>

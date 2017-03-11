@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Airport: Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(images/planes-bg-image.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-align-center">Registration Form</h2>
+
+        <table>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Nickname</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">First Name</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Second Name</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">E-Mail</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="email" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Password</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="password" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Repeat password</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="password" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Date of birth</span><br />
+                    <input class="block-width-full-input text-size-medium block-padding-big" type="date" />
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <span class="text-size-medium">Gender</span><br />
+                    <input type="radio" name="gender" checked> Male<br>
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <input id="licenseCheck" type="checkbox">I agree with <a href="license-page.html">License</a> terms.<br>
+                </td>
+            </tr>
+            <tr>
+                <td class="block-padding-big">
+                    <button type="button" class="button text-size-huge block-width-full" onclick="check()">
+                        Complete
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script language="JavaScript">
+        function check()
+        {
+            var input = document.getElementById("licenseCheck");
+            if (input.checked) {
+                location.href = "main-page.html";
+            } else {
+                alert("You must agree with license for compete the registration.");
+            }
+        }
+    </script>
+</body>
+</html>

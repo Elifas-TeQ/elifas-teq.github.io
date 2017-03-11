@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Airport: String</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(images/planes-bg-image.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-align-center">String</h2>
+
+        <div class="container">
+            <input id="inputData" class="block-width-full-input text-size-medium block-padding-big" type="text" />
+
+            <button style="margin-bottom:20px; margin-top:20px" type="button" class="button text-size-huge block-width-full" onclick="findOutLongestWord()">
+                Calculate
+            </button>
+
+            <p id="resultPar" class="text-align-justify" style="text-align:center">
+                Longest Word: not calculated yet.
+            </p><br />
+        </div>
+
+        <script language="JavaScript">
+            function findOutLongestWord() {
+
+                var inputData = document.getElementById("inputData"),
+                    text = inputData.value;
+
+                var maxLength = 0,
+                    currentLength = 0,
+                    longestWord = "",
+                    temporaryWord = "";
+
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] == " ") {
+                        if (currentLength > maxLength) {
+                            maxLength = currentLength;
+                            longestWord = temporaryWord;
+                        }
+                        currentLength = 0;
+                        temporaryWord = "";
+                    }
+                    else {
+                        currentLength++;
+                        temporaryWord += text[i];
+                    }
+                }
+                if (currentLength > maxLength)
+                {
+                    currentLength = maxLength;
+                    longestWord = temporaryWord;
+                }
+
+                document.getElementById("resultPar").textContent = "Longest Word: " + longestWord + ". Its length is " + maxLength + " symbols.";
+            }
+        </script>
+    </div>
+</body>
+</html>

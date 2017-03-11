@@ -1,0 +1,69 @@
+﻿.center-wrapper {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+}
+
+.button {
+    background-color: #00a1ff;
+    border: 1px solid #0000ff;
+    color: #0000ff;
+    padding: 5px 15px;
+}
+
+.container{
+    width: 60%;
+    position: relative;
+    left: 20%;
+    margin-top: 40px;
+    margin-bottom:80px;
+}
+
+.table {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table.td {
+    padding: 5px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+.text-size-medium {
+    font-size: 16px;
+}
+
+.text-size-big {
+    font-size: 20px;
+}
+
+.text-size-huge {
+    font-size: 24px;
+}
+
+.text-color-green {
+    color: green;
+}
+
+.block-padding {
+    padding: 1px;
+}
+
+.block-padding-big {
+    padding: 3px;
+}
+
+.block-width-full {
+    width: 100%;
+}
+
+.block-width-full-input {
+    width: 96%;
+}
